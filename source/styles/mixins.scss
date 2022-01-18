@@ -1,0 +1,41 @@
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+  
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin navbar-point {
+    color: $grey;
+    font-family: $primaryFontMedium;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+@mixin btn-primary-outline {
+    color: $red !important;
+    border-color: $red !important;
+    border-radius: 50px !important;
+    font-size: 16px !important;
+    line-height: 19px !important;
+    font-family: $primaryFontSemiBold;
+    padding: 13px 45px;
+}
+
+@mixin btn-primary-outline-hover {
+    background-color: $red !important;
+    color: #fff !important;
+}
+
+@mixin btn-primary{
+    border-radius: 10px !important;
+    background-color: $red !important;
+    font-family: $primaryFontSemiBold !important;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 17px 75px;
+    border-color: $red;
+}

@@ -1,0 +1,30 @@
+.content{
+    @include flex-row;
+    align-items: center;
+    margin: 89px 0 127px;
+    &-descr{
+        h1{
+            font-size: 50px;
+            line-height: 70px;
+            color: $darkBlue;
+            font-family: $primaryFontMedium;
+            margin: 0 0 20px;
+        }
+        &__title{
+            font-size: 16px;
+            line-height: 30px;
+            color: $darkBlue;
+            font-family: $primaryFontMedium;
+            margin-bottom: 50px; 
+        }
+        &__button{
+            @include flex-column;
+            align-items: flex-start;
+            button {
+                @include btn-primary;
+            }
+        }
+        
+    }
+}
+

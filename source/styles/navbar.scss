@@ -1,0 +1,35 @@
+.navbar{
+    &-points{
+        @include flex-row;
+        &__point{
+            @include navbar-point;
+            margin-left: 40px;
+            &:hover{
+                color: $darkBlue;
+                font-family: $primaryFontSemiBold;
+                cursor: pointer;
+            }
+        }
+    }
+    &-button{
+        @include flex-row;
+        align-items: center;
+        .btn-outline-primary{
+            @include btn-primary-outline;
+        }
+        .btn-outline-primary:hover{
+            @include  btn-primary-outline-hover;
+        }
+        &__btn{
+            font-size: 16px;
+            line-height: 19px;
+            font-family: $primaryFontSemiBold;
+            padding-right: 30px;
+            &:hover{
+                color: $red;
+                cursor: pointer;
+            }
+        }
+    }
+
+} 
