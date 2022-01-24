@@ -3,28 +3,181 @@
     align-items: center;
     margin: 89px 0 127px;
     &-descr{
+        width: 50%;
+        &:last-child{
+            margin-left: 169px;
+            margin-top: 100px;
+            @media(max-width:$lg){
+                margin-left: 130px;
+                margin-top: 80px;
+            }
+            @media(max-width:$md){
+                margin-left: 90px;
+                margin-top: 50px; 
+            }
+            @media(max-width: $xs){
+                margin-left: 0;
+            }
+        }
         h1{
             font-size: 50px;
             line-height: 70px;
             color: $darkBlue;
             font-family: $primaryFontMedium;
-            margin: 0 0 20px;
+            margin: 0 40px 20px 0;
+            @media(max-width:$lg){
+                font-size: 40px;
+                line-height: 51px;
+                margin: 0 7px 15px 0;
+            }
+            @media(max-width:$md){
+                font-size: 35px;
+                line-height: 45px;
+            }
+            @media(max-width:$xs){
+                margin-right: 0;
+            }
         }
         &__title{
             font-size: 16px;
             line-height: 30px;
-            color: $darkBlue;
+            color: $grey;
             font-family: $primaryFontMedium;
-            margin-bottom: 50px; 
+            margin: 0 40px 20px 0;
+            @media(max-width:$lg){
+                font-size: 14px;
+                line-height: 25px;
+            }
+            @media(max-width:$xs){
+                margin-right: 0;
+            }
         }
         &__button{
             @include flex-column;
             align-items: flex-start;
             button {
                 @include btn-primary;
+                margin-top: 30px;
+                &:hover{
+                    @include btn-primary-hover;
+                }
+            }
+        }
+        h2{
+           @include h2;
+        }
+        ul{
+            list-style: none;
+            padding-left: 0;
+            li{
+                font-size: 14px;
+                line-height: 30px;
+                color: $grey;
+                font-family: $primaryFontMedium;
+                padding-bottom: 15px;
+                position: relative;
+                margin-left: 35px;
+                &::before{
+                    content: url(../img/check.png);
+                    position: absolute;
+                    left: -35px;
+                }
+                @media(max-width: $lg){
+                    font-size: 13px;
+                    line-height: 28px;
+                    padding-bottom: 10px
+                }
+            }
+            @media(max-width: $xs){
+                text-align: left;
             }
         }
         
+    }
+    @media(max-width: $lg){
+        margin: 80px 0 100px; 
+    }
+    &-picture{
+        width: 50%; 
+        img{
+            width: 100%;
+        }
+        @media(max-width: $xs){
+            width: 80%;
+            margin: 20px;
+        }
+    }
+    @media(max-width:$md){
+        margin-bottom: 80px;
+    }
+    @media(max-width:$xs){
+        @include flex-column;
+        text-align: center;
+    }
+}
+
+.advantages{
+    margin: 0 auto 10px;
+    @include flex-row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 13px 39px rgba(128, 128, 128, 0.25);
+    border-radius: 10px;
+    padding: 67px 91px;
+    .advantage{
+        @include flex-row;
+        align-items: center;
+        &-picture{
+            img{
+                @media(max-width:$xs){
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            background-color: $pink;
+            border-radius: 70px;
+            padding: 19px 19px;
+            margin-right: 36px;
+            @media(max-width:$sm){
+                margin-right: 20px;
+            }
+            @media(max-width: $xs){
+                padding: 10px !important;
+                margin-right: 10px;
+            }
+        }
+        &-descr{
+            h3{
+                @include h3;
+            }
+            &__title{
+                font-size: 20px;
+                line-height: 30px;
+                color: $grey;
+                font-family: $primaryFontMedium;
+                @media (max-width: $lg){
+                    font-size: 18px;
+                    line-height: 26px;
+                }
+                @media(max-width:$xs){
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+    @media (max-width: $lg){
+        padding: 40px 70px; 
+    }
+    @media(max-width:$md){
+        margin: 0;
+        padding: 30px 60px;
+    }
+    @media(max-width:$sm){
+        padding: 20px 40px;
+    }
+    @media(max-width:$xs){
+        padding: 15px 15px;
     }
 }
 

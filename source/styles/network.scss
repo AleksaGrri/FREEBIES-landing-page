@@ -1,0 +1,27 @@
+.network-map{
+    text-align: center;
+    margin-bottom: 140px;
+    h2{
+        @include h2;
+    }
+    &__title{
+        font-size: 16px;
+        line-height: 30px;
+        color: $grey;
+        font-family: $primaryFontMedium;
+        margin-bottom: 155px;
+        @media(max-width: $lg){
+            font-size: 14px;
+            line-height: 25px;
+            margin-bottom: 115px;
+        }
+    }
+    img{
+        @media(max-width: $lg){
+            width: 100%;
+        }
+    }
+    @media(max-width: $lg){
+        margin-bottom: 110px;
+    }
+}

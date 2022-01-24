@@ -1,0 +1,123 @@
+.carousel-item-card{
+    border: 2px solid #DDDDDD;
+    border-radius: 10px;
+    width: 40%;
+    height: 260px;
+    margin: 0 auto 82px;
+    padding: 30px;
+    &__info{
+        @include flex-row;
+        justify-content: space-between;
+    }
+    &__title{
+        @include flex-row;
+        justify-content: space-between;
+        &-name h4{
+            @include h4;
+            margin: 0;
+        }
+        &-country{
+            font-size: 14px;
+            line-height: 30px;
+            font-family: $primaryFontRegular;
+            color: $grey;
+            @media(max-width:$xs){
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+    }
+    &__title img{
+        height: 50px;
+        width: 50px;
+        margin-right: 20px;
+    }
+    &__rating{
+        @include flex-row;
+        align-items: center;
+        &-title{
+            font-size: 16px;
+            line-height: 30px;
+            font-family: $primaryFontRegular;
+            color: $darkBlue;
+            @media(max-width: $lg){
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+    &__rating img{
+        width: 16px;
+        height: 16px;
+        margin-left: 10px;
+    }
+    &__descr{
+        font-size: 16px;
+        line-height: 30px;
+        font-family: $primaryFontRegular;
+        color: $darkBlue;
+        margin-top: 20px;
+        @media(max-width: $lg){
+            font-size: 14px;
+            line-height: 25px;
+        } 
+    }
+    &:hover{
+        border: 2px solid $red;
+        box-shadow: 0px 28px 41px -2px rgba(166, 166, 166, 0.25);
+        cursor: pointer;
+    }
+    @media(max-width: $lg){
+        margin: 0px auto 60px;
+        padding: 20px;
+    }
+    @media(max-width: $md){
+        margin-bottom: 40px;
+    }
+    @media(max-width:$sm){
+        width: 50%;
+    }
+    @media(max-width:$xs){
+        width: 90%;
+    }
+}
+
+.carousel-indicators{
+    justify-content: center !important;
+    bottom: 0px !important;
+    position: inherit !important;
+    button{
+        width: 15px !important;
+        height: 15px !important;
+        background: $red !important;
+        border-radius: 50%;
+        margin-left: 15px !important;
+        border: none !important;
+        @media(max-width: $lg){
+            width: 12px !important;
+            height: 12px !important;
+        }
+    }
+}
+
+.carousel-control{
+    @include flex-row;
+    justify-content: center;
+    margin-top: 20px;
+    &-prev{
+        &-icon{
+            background-image: url(../img/left.png) !important;
+        }
+        @media(max-width:$xs){
+            align-items: flex-end !important;     
+         }
+    }
+    &-next{
+       &-icon{
+            background-image: url(../img/right.png) !important;
+       }
+       @media(max-width:$xs){
+            align-items: flex-end !important;     
+        }
+    }
+}

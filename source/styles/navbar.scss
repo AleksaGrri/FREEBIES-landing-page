@@ -9,7 +9,15 @@
                 font-family: $primaryFontSemiBold;
                 cursor: pointer;
             }
+            @media (max-width: $lg) {
+                font-size: 14px;
+                line-height: 16px;
+                margin-left: 20px;
+            }
         }
+        @media(max-width:$md){
+            display: none;
+        } 
     }
     &-button{
         @include flex-row;
@@ -29,7 +37,25 @@
                 color: $red;
                 cursor: pointer;
             }
+            @media(max-width:$xs){
+                padding-right: 10px !important;
+                font-size: 14px !important;
+                line-height: 18px !important;  
+            }
         }
     }
-
+    img.burger{
+        display: none;
+        @media(max-width:$md){
+            display: block;
+        }
+    }
+    &-logo{
+        img{
+            width: 100%;
+        }
+        @media(max-width: $xs){
+            width: 25%;
+        }
+    }
 } 

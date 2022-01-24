@@ -23,11 +23,21 @@
     line-height: 19px !important;
     font-family: $primaryFontSemiBold;
     padding: 13px 45px;
+    @media(max-width:$lg){
+        font-size: 14px !important;
+        line-height: 16px !important;
+        padding: 10px 35px;
+    }
+    @media(max-width:$xs){
+        font-size: 12px !important;
+        padding: 10px 25px !important;
+    }
 }
 
 @mixin btn-primary-outline-hover {
     background-color: $red !important;
     color: #fff !important;
+    box-shadow: 0px 28px 41px -2px rgba(245, 56, 56, 0.25);
 }
 
 @mixin btn-primary{
@@ -38,4 +48,80 @@
     line-height: 25px;
     padding: 17px 75px;
     border-color: $red;
+    box-shadow: 0px 28px 41px -2px rgba(245, 56, 56, 0.25);
+    @media (max-width: $lg){
+        font-size: 14px;
+        line-height: 20px;
+        padding: 15px 65px;
+    }
+    @media(max-width:$md){
+        margin-top: 10px;
+    }
+    @media(max-width:$sm){
+        padding: 10px 55px; 
+    }
+}
+
+@mixin btn-primary-hover{
+    background-color: #fff !important;
+    color: $red !important;
+    border-color: $red !important;
+    box-shadow: none;
+}
+
+@mixin h2{
+    font-size: 35px;
+    line-height: 50px;
+    font-family: $primaryFontSemiBold;
+    color: $darkBlue;
+    margin-bottom: 20px;
+    @media (max-width: $lg){
+        font-size: 30px;
+        line-height: 43px;
+        margin-bottom: 15px;
+    }
+    @media(max-width:$md){
+        font-size: 28px;
+        line-height: 38px;
+        margin-bottom: 10px;
+    }
+    @media(max-width:$sm){
+        font-size: 25px;
+        line-height: 30px;
+    }
+}
+
+@mixin h3{
+    font-size: 25px;
+    line-height: 30px;
+    color: $darkBlue;
+    font-family: $primaryFontBold;
+    margin-bottom: 5px;
+    @media (max-width: $lg){
+        font-size: 22px;
+        line-height: 26px; 
+    }
+    @media(max-width: $md){
+        font-size: 20px;
+        line-height: 22px;
+    }
+    @media(max-width: $xs){
+        font-size: 18px;
+        line-height: 18px;
+    }
+}
+
+@mixin h4{
+    font-size: 18px;
+    line-height: 30px;
+    color: $darkBlue;
+    font-family: $primaryFontSemiBold;
+    @media (max-width: $lg){
+        font-size: 16px;
+        line-height: 25px; 
+    }
+    @media(max-width:$xs){
+        font-size: 14px;
+        line-height: 18px;
+    }
 }

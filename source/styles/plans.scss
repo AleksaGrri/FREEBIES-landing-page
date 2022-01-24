@@ -1,0 +1,113 @@
+.plans-item{
+    text-align: center;
+    h2{
+        @include h2;
+    }
+    &__title{
+        font-size: 16px;
+        line-height: 30px;
+        color: $grey; 
+        font-family: $primaryFontMedium;
+        margin-bottom: 60px;
+        @media(max-width:$lg){
+            font-size: 14px;
+            line-height: 25px;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.plans-descr{
+    @include flex-row;
+    justify-content: space-between;
+    &-plan{
+        width: 30%;
+        background-color: #fff;
+        border-radius: 10px;
+        border: 2px solid #DDDDDD;
+        padding: 70px 0 50px;
+        text-align: center;
+        @include flex-column;
+        justify-content: space-between;
+        &:hover{
+            border: 2px solid $red;
+        }
+        img{
+            margin-bottom: 30px;
+        }
+        h4{
+            @include h4;
+        }
+        ul{
+            list-style: none;
+            text-align: start !important;
+            margin: 30px auto 0;
+            width: 70%;
+            li{
+                font-size: 14px;
+                line-height: 30px;
+                color: $grey;
+                font-family: $primaryFontMedium;
+                position: relative;
+                margin-left: 35px;
+                &::before{
+                    content: url(../img/check_plan.png);
+                    position: absolute;
+                    left: -35px;
+                }
+                @media(max-width: $lg){
+                    font-size: 12px;
+                    margin-left: 20px; 
+                } 
+            }
+            @media(max-width: $lg){
+                margin: 20px auto 0; 
+            }
+        }
+        &-title{
+            &__price{
+                @include flex-row;
+                @include h3;
+                justify-content: center;
+                margin:50px 0 20px;
+                align-items: center;
+                p{
+                    color: $grey;
+                    font-family: $primaryFontMedium;
+                    margin: 0;
+                }
+                h3{
+                   @include h3;
+                    margin: 0 5px 0 0;
+                }
+                @media(max-width: $lg){
+                    margin:40px 0 15px;
+                }
+            }
+        }
+        button{
+            @include btn-primary-outline;
+            bottom: 50px;
+            &:hover{
+                @include btn-primary-outline-hover;
+            }
+        }
+        @media(max-width: $lg){
+            padding: 50px 0 40px;
+        }
+        @media(max-width: $md){
+            margin-bottom: 50px;
+            width: 35%;
+        }
+        @media(max-width:$sm){
+            width: 45%; 
+        }
+        @media(max-width:$xs){
+            width: 80%;
+        }    
+    }
+    @media(max-width:$md){
+        @include flex-column;
+        align-items: center;
+    }
+}
